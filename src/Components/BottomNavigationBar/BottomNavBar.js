@@ -27,8 +27,9 @@ class BottomNavBar extends Component {
         const data = {
             longUrlData: this.state.long_url
         }
+        var config = {'apikey': 'foobarkey'}
 
-        axios.post(getURL("create"), null, { params: {
+        axios.post(getURL("create"), {headers : config}, { params: {
             url: this.state.long_url
           }})
         .then( response => {
