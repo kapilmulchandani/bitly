@@ -1,4 +1,4 @@
-const ROOT_URL = 'http://18.207.2.7:8000';
+const ROOT_URL = 'http://100.25.166.41:8000';
 const getURL = function (resourcePath){
     if(resourcePath.startsWith("/")){
         return `${ROOT_URL}${resourcePath}`;
