@@ -25,7 +25,7 @@ class BottomNavBar extends Component {
         e.preventDefault();
         console.log(this.state.long_url);
         const data = {
-            longUrlData: this.state.long_url
+            url: this.state.long_url
         }
         let getconfig = {
             headers: {'apikey': 'foobarkey'},
@@ -40,14 +40,11 @@ class BottomNavBar extends Component {
         } )
 
         let postconfig = {
-            headers: {'apikey': 'foobarkey'},
-            params: {
-              url: "https://stackoverflow.com/questions/60898755/set-params-and-headers-in-axios-post-request"
-            },
+            headers: {'apikey': 'foobarkey'}
           }
 
 
-        axios.post(getURL("create"), null, postconfig)
+        axios.post(getURL("create"), data, postconfig)
         .then( response => {
                 console.log("response data : ", response.data);
                 this.setState ( {
