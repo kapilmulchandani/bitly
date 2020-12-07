@@ -28,6 +28,14 @@ class BottomNavBar extends Component {
             longUrlData: this.state.long_url
         }
         var config = {'apikey': 'foobarkey'}
+        
+        axios.get(getURL("getUrl"), {headers: config}, { params : {
+            url: 'http://cmpe.sjsu/voatgz'
+        }})
+        .then( response => {
+            console.log("getURL response data: ", response.data);
+        } )
+
 
         axios.post(getURL("create"), {headers : config}, { params: {
             url: this.state.long_url
