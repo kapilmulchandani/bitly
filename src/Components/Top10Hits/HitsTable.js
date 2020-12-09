@@ -27,7 +27,7 @@ class HitsTable extends Component {
             headers: { 'apikey': 'foobarkey' },
         }
 
-        const { data } = await axios.get("getAllDocuments", getconfig);
+        const { data } = await axios.get(getURL("getAllDocuments"), getconfig);
         // const { data } = await axios.get(`http://localhost:8009/getAllDocuments`, getconfig);
         this.setState({
             all_links: data
