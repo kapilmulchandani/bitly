@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import getURL from '../url';
 
 class Navigationbar extends Component {
 
