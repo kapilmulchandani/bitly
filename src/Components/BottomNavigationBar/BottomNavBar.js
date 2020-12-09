@@ -66,8 +66,8 @@ class BottomNavBar extends Component {
         }
 
 
-        // axios.post(getURL("create"), data, postconfig)
-        axios.post("http://localhost:8000/create", data, postconfig)
+        axios.post(getURL("create"), data, postconfig)
+        // axios.post("http://localhost:8000/create", data, postconfig)
             .then(response => {
                 console.log("response data : ", response.data);
                 console.log("shortURL: ", response.data.short_URL);
