@@ -30,7 +30,7 @@ class Navigationbar extends Component {
             },
         }
 
-        axios.get(getURL("getUrl"), getconfig)
+        await axios.get(getURL("getUrl"), getconfig)
         // await axios.get("http://localhost:8009/getUrl", getconfig)
             .then(response => {
                 console.log("getURL response data: ", response.data.url);
